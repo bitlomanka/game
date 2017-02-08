@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "browser-sync": "latest",
+    "cssnano": "latest",
+    "gulp": "latest",
+    "gulp-compass": "latest",
+    "gulp-concat": "latest",
+    "gulp-concat-css": "latest",
+    "gulp-if": "latest",
+    "gulp-jade": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "latest",
+    "gulp-rename": "latest",
+    "gulp-uglify": "latest",
+    "gulp-useref": "latest"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Victoria",
+  "license": "ISC"
+}

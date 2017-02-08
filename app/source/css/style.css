@@ -1,0 +1,60 @@
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  display: table-row;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1210px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
