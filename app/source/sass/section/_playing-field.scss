@@ -1,0 +1,25 @@
+.game-container{
+    width: 49.5%;
+    margin: 0 auto 50px auto;
+    overflow: hidden;
+}
+
+.game__list{
+    box-sizing: border-box;
+    width: 100%;
+    @extend %letter-spacing;
+    border: 1px solid #ccc;
+    margin: -1px 0 0 -1px;
+}
+
+.game__item{
+    @extend %inline-block;
+    box-sizing: border-box;
+    width: 6.66%;
+    padding: 6.6% 0 0 0;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+}
+
