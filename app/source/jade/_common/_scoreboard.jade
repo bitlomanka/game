@@ -1,7 +1,9 @@
 .scoreboard
-    +player('player 1', 'player-1')
-    .scoreboard__score-container
-        .scoreboard__score.scoreboard__score_player-1 0
-        .delimiter :
-        .scoreboard__score.scoreboard__score_player-2 0
-    +player('player 2', 'player-2')
+    include _player-block
+    +player('Игрок 1', 'player-1')
+    include _player-block
+    +player('Игрок 2', 'player-2')
+//    .scoreboard__score-container
+//        .scoreboard__score.scoreboard__score_player-1 0
+//        .delimiter :
+//        .scoreboard__score.scoreboard__score_player-2 0

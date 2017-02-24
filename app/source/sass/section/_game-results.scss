@@ -1,0 +1,27 @@
+.result__text{
+    text-align: center;
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+    font: 20px $font-family;
+    color: #49525f;
+    border-bottom: 1px solid #49525F;
+}
+
+.result__player{
+    margin: 0 0 0 5px;
+}
+
+.new-game{
+    width: 90px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 10px;
+    color: #49525f;
+    border: 2px solid #49525F;
+    cursor: pointer;
+}
+
+.new-game:hover{
+    color: #fff;
+    background: #49525f;
+}

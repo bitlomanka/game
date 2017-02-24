@@ -1,0 +1,29 @@
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  width: 30%;
+}
+
+.modal__block {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 4%;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}

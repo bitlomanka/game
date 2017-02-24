@@ -37,6 +37,10 @@
 
 $font-family: 'robotoregular';
 
+$color-player-1: #F16536;
+
+$color-player-2: #7EA94C;
+
 h1, h2, h3{
     margin: 0;
     padding: 0;
@@ -75,12 +79,14 @@ html, body {
     height: 100%;
     width: 100%;
     position: relative;
+    background: #F3F3F3;
 }
 
 .content {
     display: table-row;
     height: 100%;
     overflow: hidden;
+    
 }
 
 .container{
@@ -90,6 +96,10 @@ html, body {
     box-sizing: border-box;
     @extend %clearfix;
     position: relative;
+}
+
+.container_bg{
+    background: #fff;
 }
 
 

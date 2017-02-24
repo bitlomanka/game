@@ -8,6 +8,10 @@
   vertical-align: top;
 }
 
+.modal__save {
+  text-align: center;
+}
+
 .container:before, .container:after {
   content: "";
   display: table;
@@ -53,6 +57,7 @@ html, body {
   height: 100%;
   width: 100%;
   position: relative;
+  background: #F3F3F3;
 }
 
 .content {
@@ -69,23 +74,104 @@ html, body {
   position: relative;
 }
 
+.container_bg {
+  background: #fff;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  width: 30%;
+}
+
+.modal__block {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 4%;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}
+
+.modal__text {
+  color: #666;
+  font: 16px "robotoregular";
+  margin: 0 0 20px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 3px 5px;
+  cursor: pointer;
+  border: 1px solid #666;
+}
+
+.modal__name-player {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 5%;
+  border: 1px solid #666;
+  display: none;
+  margin: 0 0 20px;
+}
+
+.modal__name-player_1 {
+  color: #F16536;
+}
+
+.modal__name-player_2 {
+  color: #7EA94C;
+}
+
+.modal__name_active {
+  display: block;
+}
+
+.modal__save {
+  width: 60px;
+  font: 16px "robotoregular";
+  color: #666;
+  border: 1px solid #666;
+  cursor: pointer;
+}
+
 .header {
-  background: #ccc;
-  margin: 0 0 50px;
+  background: #fff;
+  margin: 0 0 20px;
 }
 
 .logo {
-  padding: 20px 10px;
+  display: block;
+  padding: 10px;
+  color: #fff;
 }
 
 .footer {
   height: 30px;
-  background: #131925;
+  background: #212326;
 }
 
 .scoreboard {
   width: 50%;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -104,15 +190,15 @@ html, body {
 }
 
 .scoreboard__player_active {
-  box-shadow: 1px 1px 2px #666;
+  box-shadow: 0 0 0 2px #666;
 }
 
 .scoreboard__player-name_player-1 {
-  color: red;
+  color: #F16536;
 }
 
 .scoreboard__player-name_player-2 {
-  color: green;
+  color: #7EA94C;
 }
 
 .scoreboard__score-container {
@@ -138,7 +224,7 @@ html, body {
 .game__list {
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #49525F;
   margin: -1px 0 0 -1px;
 }
 
@@ -146,8 +232,53 @@ html, body {
   box-sizing: border-box;
   width: 6.66%;
   padding: 6.6% 0 0 0;
-  border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-left: 1px solid #49525F;
+  border-top: 1px solid #49525F;
   cursor: pointer;
   position: relative;
+}
+
+.game__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40%;
+  border-radius: 50%;
+}
+
+.game__dot_player-1 {
+  background: #F16536;
+}
+
+.game__dot_player-2 {
+  background: #7EA94C;
+}
+
+.result__text {
+  text-align: center;
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  font: 20px "robotoregular";
+  color: #49525f;
+  border-bottom: 1px solid #49525F;
+}
+
+.result__player {
+  margin: 0 0 0 5px;
+}
+
+.new-game {
+  width: 90px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px 10px;
+  color: #49525f;
+  border: 2px solid #49525F;
+  cursor: pointer;
+}
+
+.new-game:hover {
+  color: #fff;
+  background: #49525f;
 }

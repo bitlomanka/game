@@ -1,0 +1,45 @@
+.modal__text{
+    color: #666;
+    font: 16px $font-family;
+    margin: 0 0 20px;
+}
+
+.modal__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 3px 5px;
+    cursor: pointer;
+    border: 1px solid #666;
+}
+
+.modal__name-player{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 5%;
+    border: 1px solid #666;
+    display: none;
+    margin: 0 0 20px;
+}
+
+.modal__name-player_1{
+    color: $color-player-1;
+}
+
+.modal__name-player_2{
+    color: $color-player-2;
+}
+
+.modal__name_active{
+    display: block;
+}
+
+.modal__save{
+    width: 60px;
+    @extend %text-align-center;
+    font: 16px $font-family;
+    color: #666;
+    border: 1px solid #666;
+    cursor: pointer;
+}
+

@@ -1,0 +1,16 @@
+.result__text {
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+.result__player {
+  margin: 0 0 0 5px;
+}
+
+.new-game {
+  width: 90px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px 10px;
+  border: 2px solid #49525F;
+}

@@ -1,7 +1,8 @@
 .scoreboard{
     @extend %letter-spacing;
     width: 50%;
-    margin: 0 auto 30px auto;
+    margin: 0 auto;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -21,15 +22,15 @@
 }
 
 .scoreboard__player_active{
-    box-shadow: 1px 1px 2px #666;
+    box-shadow: 0 0 0 2px #666;
 }
 
 .scoreboard__player-name_player-1{
-    color:red;
+    color: $color-player-1;
 }
 
 .scoreboard__player-name_player-2{
-    color: green;
+    color: $color-player-2;
 }
 
 

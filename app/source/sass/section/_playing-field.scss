@@ -8,7 +8,7 @@
     box-sizing: border-box;
     width: 100%;
     @extend %letter-spacing;
-    border: 1px solid #ccc;
+    border: 1px solid #49525F;
     margin: -1px 0 0 -1px;
 }
 
@@ -17,9 +17,26 @@
     box-sizing: border-box;
     width: 6.66%;
     padding: 6.6% 0 0 0;
-    border-left: 1px solid #ccc;
-    border-top: 1px solid #ccc;
+    border-left: 1px solid #49525F;
+    border-top: 1px solid #49525F;
     cursor: pointer;
     position: relative;
+}
+
+.game__dot{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40%;
+    border-radius: 50%;
+}
+
+.game__dot_player-1{
+    background: $color-player-1;
+}
+
+.game__dot_player-2{
+    background: $color-player-2;
 }
 
