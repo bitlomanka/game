@@ -4,6 +4,12 @@ $(document).ready(function(){
     
     function namePlayer(){
         
+        var items = $('.game__item');
+        
+        if(items.length == 0){
+            itemFunc();
+        }
+        
         function modalWindow(){
             
             $.ajax({
@@ -25,6 +31,7 @@ $(document).ready(function(){
         }
         
         function saveName(){
+            
             var elem = $('.modal__name_active'),
                 val = elem.val(),
                 player = '';
@@ -47,15 +54,28 @@ $(document).ready(function(){
         }
         
         function recordName(name, player){
+            var gameObj = localStorage.getItem('game');
             
             if(player == 1){
+                
                 $('.scoreboard__player-name_player-1').text(name).addClass('scoreboard__player_active');
             }else{
                 $('.scoreboard__player-name_player-2').text(name);
                 $('.modal-container').remove();
             }
         }
+        
+        
 	
+    }
+    
+    function itemFunc(){
+        var list = $('.game__list'),
+            item = 225;
+        
+        for(var i = 0; i < item; i++){
+            list.append('<li class="game__item"></li>')
+        }
     }
     
     $('.game__list').on('click', '.game__item', clickFunc);
@@ -84,20 +104,31 @@ $(document).ready(function(){
         var gameObj = localStorage.getItem('game'),
             idx = elem.index(),
             player = elem.find('.game__dot').hasClass('game__dot_player-1') ? 'player-1' : 'player-2';
-         
-        if(gameObj == null){
-            gameObj = {};
+        
+        if(player == 'player-1'){
+            player = $('.scoreboard__player-name_player-1').text();
         }else{
-            gameObj = stringInObj(gameObj);
+            player = $('.scoreboard__player-name_player-2').text();
         }
         
-        if(gameObj[player] == undefined){
-            gameObj[player] = [];
+        
+         
+        if(gameObj == null){
+            saveNamePlayer();
+            gameObj = localStorage.getItem('game'); 
+        }
+        
+        if(gameObj !== null){
+            gameObj = stringInObj(gameObj);
         }
 
+        console.log(gameObj)
         for(var key in gameObj){
+            
             if(key == player){
+                console.log(key)
                 gameObj[key].push(idx);
+                
             }
         }
         
@@ -120,43 +151,84 @@ $(document).ready(function(){
     }
 
     function checkLocalStorage(){
+        var items = $('.game__item');
+        
+        if(items.length == 0){
+            itemFunc();
+        }
+        
         var gameObj = localStorage.getItem('game'),
             numberTurnsPayer1 = 0,
             numberTurnsPayer2 = 0;
+        
         gameObj = stringInObj(gameObj); 
+        
         
         if(gameObj != null){
             
             for(var key in gameObj){
                 
+                namePlayerLocalStorage(key);
+                
                 var arr = gameObj[key];
                 
                 for(var i = 0; i < arr.length; i++){
-                    
+
                     var idx = arr[i],
                         classSpan = '';
 
-                    if(key == 'player-1'){
+                    if(key == $('.scoreboard__player-name_player-1').text()){
                         numberTurnsPayer1 = arr.length;
                         classSpan = 'game__dot_player-1';
                     }else{
                         numberTurnsPayer2 = arr.length;
                         classSpan = 'game__dot_player-2';
                     }
+                    
+                    console.log(key)
                     $('.game__item').eq(idx).append('<span class="game__dot ' + classSpan + '"></span>');
                 }
             }
             
-            if(numberTurnsPayer1 >= numberTurnsPayer2){
+            if(numberTurnsPayer1 > numberTurnsPayer2){
                 toggleClassFunc('player-2');
             }else{
                 toggleClassFunc('player-1');
             }
         }else{
+        
             namePlayer();
         }
     }
     checkLocalStorage();
+    
+    function saveNamePlayer(){
+        var obj = localStorage.getItem('game');
+        
+        if(obj == null){
+            var player1 = $('.scoreboard__player-name_player-1').text();
+            var player2 = $('.scoreboard__player-name_player-2').text();
+            obj = {};
+            
+            obj[player1] = [];
+            obj[player2] = [];
+            
+            obj = objInString(obj);
+            
+            localStorage.setItem('game', obj)
+        }
+        
+    }
+    
+    function namePlayerLocalStorage(key){
+        
+        
+        if($('.scoreboard__player-name_player-1').text() == ''){
+            $('.scoreboard__player-name_player-1').text(key);
+        }else{
+            $('.scoreboard__player-name_player-2').text(key);
+        }  
+    }
     
     function checkFunc(){
         var player1 = $('.game__dot_player-1'),
@@ -184,12 +256,13 @@ $(document).ready(function(){
     }
     
     function checkHorizontale(elems, arr){
-        var max = 15;
+        
         
         elems.each(function(){
             var idx = $(this).parent().index();
             var lastIdx = idx + 5,
-                res = idx;
+                res = idx,
+                max = 15 * (parseInt(idx / 15)+1);
             
             for(var c = 0; c < arr.length; c++){
                 

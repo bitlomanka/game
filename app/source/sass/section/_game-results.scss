@@ -19,6 +19,9 @@
     color: #49525f;
     border: 2px solid #49525F;
     cursor: pointer;
+    @include media("max-width: 700px") {
+        padding: 10px;
+    }
 }
 
 .new-game:hover{

@@ -2,6 +2,12 @@
     width: 49.5%;
     margin: 0 auto 50px auto;
     overflow: hidden;
+    @include media("max-width: 960px") {
+        width: 60%;
+    }
+    @include media("max-width: 700px") {
+        width: 100%;
+    }
 }
 
 .game__list{

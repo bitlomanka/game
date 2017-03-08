@@ -98,6 +98,11 @@ html, body {
   max-width: 700px;
   width: 30%;
 }
+@media only screen and (max-width: 700px) {
+  .modal {
+    width: 70%;
+  }
+}
 
 .modal__block {
   box-sizing: border-box;
@@ -112,6 +117,11 @@ html, body {
   color: #666;
   font: 16px "robotoregular";
   margin: 0 0 20px;
+}
+@media only screen and (max-width: 700px) {
+  .modal__text {
+    font-size: 20px;
+  }
 }
 
 .modal__close {
@@ -130,6 +140,11 @@ html, body {
   border: 1px solid #666;
   display: none;
   margin: 0 0 20px;
+}
+@media only screen and (max-width: 700px) {
+  .modal__name-player {
+    padding: 10px 5%;
+  }
 }
 
 .modal__name-player_1 {
@@ -151,6 +166,11 @@ html, body {
   border: 1px solid #666;
   cursor: pointer;
 }
+@media only screen and (max-width: 700px) {
+  .modal__save {
+    padding: 7px;
+  }
+}
 
 .header {
   background: #fff;
@@ -163,13 +183,8 @@ html, body {
   color: #fff;
 }
 
-.footer {
-  height: 30px;
-  background: #212326;
-}
-
 .scoreboard {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   padding: 20px 0;
   text-align: center;
@@ -177,7 +192,7 @@ html, body {
 
 .scoreboard__player-container {
   text-align: center;
-  width: 15%;
+  width: 88px;
   margin: 0 0 0 3%;
 }
 .scoreboard__player-container:first-child {
@@ -187,6 +202,11 @@ html, body {
 .scoreboard__player-name {
   padding: 5px;
   font: 18px "robotoregular";
+}
+@media only screen and (max-width: 480px) {
+  .scoreboard__player-name {
+    font-size: 16px;
+  }
 }
 
 .scoreboard__player_active {
@@ -219,6 +239,16 @@ html, body {
   width: 49.5%;
   margin: 0 auto 50px auto;
   overflow: hidden;
+}
+@media only screen and (max-width: 960px) {
+  .game-container {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .game-container {
+    width: 100%;
+  }
 }
 
 .game__list {
@@ -277,8 +307,18 @@ html, body {
   border: 2px solid #49525F;
   cursor: pointer;
 }
+@media only screen and (max-width: 700px) {
+  .new-game {
+    padding: 10px;
+  }
+}
 
 .new-game:hover {
   color: #fff;
   background: #49525f;
+}
+
+.footer {
+  height: 30px;
+  background: #212326;
 }

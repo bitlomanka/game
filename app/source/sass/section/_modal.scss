@@ -17,6 +17,9 @@
     transform: translate(-50%, -50%);
     max-width: 700px;
     width: 30%;
+    @include media("max-width: 700px") {
+        width: 70%;
+    }
 }
 
 .modal__block{

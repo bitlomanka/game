@@ -2,6 +2,9 @@
     color: #666;
     font: 16px $font-family;
     margin: 0 0 20px;
+    @include media("max-width: 700px") {
+        font-size: 20px;
+    }
 }
 
 .modal__close{
@@ -20,6 +23,9 @@
     border: 1px solid #666;
     display: none;
     margin: 0 0 20px;
+    @include media("max-width: 700px") {
+        padding: 10px 5%;
+    }
 }
 
 .modal__name-player_1{
@@ -41,5 +47,8 @@
     color: #666;
     border: 1px solid #666;
     cursor: pointer;
+    @include media("max-width: 700px") {
+        padding: 7px;
+    }
 }
 

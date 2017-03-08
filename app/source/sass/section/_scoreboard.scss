@@ -1,6 +1,6 @@
 .scoreboard{
     @extend %letter-spacing;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     padding: 20px 0;
     text-align: center;
@@ -9,7 +9,7 @@
 .scoreboard__player-container{
     @extend %inline-block;
     text-align: center;
-    width: 15%;
+    width: 88px;
     margin: 0 0 0 3%;
     &:first-child{
         margin: 0;
@@ -19,6 +19,9 @@
 .scoreboard__player-name{
     padding: 5px;
     font: 18px $font-family;
+    @include media("max-width: 480px") {
+        font-size: 16px;
+    }
 }
 
 .scoreboard__player_active{

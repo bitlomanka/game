@@ -39,7 +39,7 @@ gulp.task('compass', function() {
 gulp.task('html', ['jade', 'compass'], function () {
     return gulp.src('app/source/*.html')
         .pipe(useref())
-        .pipe(gulpif('*.js', uglify()))
+//        .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', postcss([
                 autoprefixer({ browsers: ['last 2 versions'] }),
                 cssnano
