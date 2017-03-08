@@ -27,6 +27,9 @@ $(document).ready(function(){
         $('.wrapper').on('click', '.modal__save', saveName);
             
         function modalClose(){
+            
+            $('.scoreboard__player-name_player-1').text('Игрок 1');
+            $('.scoreboard__player-name_player-2').text('Игрок 2');
             $('.modal-container').remove();
         }
         
@@ -122,11 +125,11 @@ $(document).ready(function(){
             gameObj = stringInObj(gameObj);
         }
 
-        console.log(gameObj)
+        
         for(var key in gameObj){
             
             if(key == player){
-                console.log(key)
+               
                 gameObj[key].push(idx);
                 
             }

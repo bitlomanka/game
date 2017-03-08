@@ -1,9 +1,7 @@
 .scoreboard
-    include _player-block
     +player('player-1')
-    include _player-block
     +player('player-2')
-//    .scoreboard__score-container
-//        .scoreboard__score.scoreboard__score_player-1 0
-//        .delimiter :
-//        .scoreboard__score.scoreboard__score_player-2 0
+    
+mixin player(classPlayer)
+    .scoreboard__player-container
+        .scoreboard__player-name(class="scoreboard__player-name_" + classPlayer)
